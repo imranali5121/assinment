@@ -1,0 +1,506 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 98vw;
+    height:100vh;
+}
+*{
+    box-sizing: border-box;
+    padding: 0 !important;
+    margin: 0;
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(19, 20, 70);
+    border-radius: 50px;
+}
+@font-face {
+    font-family: myfont;
+    src: url(font/SourceSansPro-Regular.ttf);
+  }
+  @font-face {
+    font-family: myfont2;
+    src: url(font/Volkhov-Bold.ttf);
+  }
+
+.main{
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+.caro{
+    position: fixed;
+    z-index: -4;
+}
+.caro img{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+
+/* top headder start*/
+.top-headder>.data{
+    padding: 5px 0px !important;
+}
+.log>a>i{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.log{
+    display: flex;
+    justify-content: flex-end;
+}
+.icon-ring{
+    border: 2px solid rgb(255, 113, 41) ;
+    padding: 3px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
+.icons i{
+    background-color:rgb(255, 113, 41) ;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+}
+/* top headder end */
+
+
+/*headder start  */
+.headder{
+    border-top: 1px solid rgba(126, 126, 126, 0.692);
+    border-bottom: 1px solid rgba(126, 126, 126, 0.692);
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.404);
+    top: 0;
+    z-index: 2;
+}
+.logo>img{
+    height: 40px;
+    filter: invert();
+    opacity: 80%;
+}
+.ul>.main-ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-family: myfont;
+    font-size: 15px;
+    position: relative;
+}
+.ul>.main-ul>li{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    color:white;
+
+    cursor: pointer;
+}
+.ul>.main-ul>li::before{
+    content: '';
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0px;
+    height: 3px;
+    width: 0;
+    background-color: rgb(255, 113, 41);
+    transition: .3s;
+}
+.ul>.main-ul>li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: auto;
+    bottom: 0px;
+    height: 3px;
+    width: 0;
+    background-color: rgb(255, 113, 41);
+    transition: .3s;
+}
+.ul>.main-ul>li:hover:before{
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition: .3s;
+}
+.ul>.main-ul>li:hover:after{
+    left: auto;
+    right: 0;
+    width: 100%;
+    transition: .3s;
+}
+.ul>.main-ul>li>.inner-ul{
+    position: absolute;
+    top: 0;
+    margin-top: 45px;
+    list-style: none;
+    background-color: rgb(197, 197, 197);
+    width: 100%;
+    height: 0;
+    border-radius: 5px;
+    transition: .3s;
+    overflow: hidden;
+}
+.ul>.main-ul>li>.inner-ul>li{
+    position: relative;
+    padding-left: 10px !important;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+.ul>.main-ul>li>.inner-ul>li:hover{
+    padding-left: 20px !important;
+    color: white;
+    border-left: 4px solid rgb(255, 113, 41);
+}
+.ul>.main-ul>:nth-child(2):hover>.inner-ul{
+    height: 60px;
+}
+.ul>.main-ul>:nth-child(3):hover>.inner-ul{
+    height: 120px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.search>.mag{
+    position: absolute;
+    left: 0;
+    margin-left: 75px;
+}
+.search>input{
+    padding: 4px 4px 4px 25px !important;
+    font-size: 14px;
+    width: 150px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.527);  
+}
+
+.bars{
+    color :white;
+    margin-right: 50px;
+    font-size: 30px;
+    display: none;
+}
+
+@media screen and (max-width:800px){
+    .bars{
+        display: block;
+    }
+    .ul{
+        display: none;
+    }
+    .mag{
+        display: none;
+    }
+    .search{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .search>input{
+        display: none;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+    }
+    .log{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* headder end */
+
+
+
+/* introduction start */
+.introduction{
+    padding: 30px 0px !important;
+}
+.introduction>h1{
+    font-family:myfont2;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    text-align: center;
+}
+.introduction>h1>.heading-left{
+    color: rgb(255, 113, 41);
+}
+.introduction>h1>.heading-right{
+    color: rgb(48, 41, 41);
+    margin-left: -10px;
+}
+.introduction>p{
+    margin-top: 50px;
+    text-align: justify;
+    color: rgb(189, 189, 189);
+    line-height: 30px;
+    word-spacing: 5px;
+}
+/* introduction end */
+
+
+/* online bookig start */
+.online-booking{
+    background-color: rgba(0, 0, 0, 0.63);
+}
+.online-booking>.online-form{
+    padding: 100px 0px !important;
+}
+.online-form>h1{
+    font-family:cursive;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+.online-form>h1>.heading-left{
+    color: rgb(255, 113, 41);
+}
+.online-form>h1>.heading-right{
+    color: rgb(48, 41, 41);
+}
+.online-form .form-input>input{
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+    border: 1px solid rgb(219, 219, 219);
+    padding-left: 10px !important;
+    outline: none;
+    height: 30px;
+    color: rgb(219, 219, 219);
+}
+.online-form .form-input>input:focus::placeholder{
+    opacity: 0;
+    transition: .3s;
+}
+.online-form .form-input{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 !important;
+}
+.online-form .form-input>.big-input{
+    padding-left: 30px !important;
+    width: 70%;
+}
+.online-form .form-input>i{
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    padding: 3px 95px !important;
+    color: rgb(219, 219, 219);
+}
+#home-address{
+    padding-left: 40px !important;
+}
+.time{
+    width: 60%;
+}
+.online-form .form-input select{
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+    border: 1px solid rgb(219, 219, 219);
+    outline: none;
+    width: 60%;
+    height: 30px;
+    color: rgb(219, 219, 219);
+}
+.online-form .form-input a{
+    text-decoration: none;
+    background-color:rgb(255, 113, 41) ;
+    padding: 10px 50px !important;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-family: myfont;
+    margin-top: 50px;
+    box-shadow: inset 0px 0px 20px black;
+}
+.online-form .form-input a:hover{
+    background-color:rgb(238, 79, 0) ;    
+}
+/* online booking end */
+
+
+/* car class start */
+.cars-classes{
+    padding: 50px !important;
+}
+.cars-classes h2{
+    font-family: myfont2;
+    margin: 50px;
+    color: rgb(238, 79, 0);
+    text-shadow: 0px 0px 10px white;
+}
+.cars-classes .card-main{
+    border: 1px solid rgb(160, 160, 160);
+    border-top: 5px solid rgb(160, 160, 160);
+    border-bottom: 5px solid rgb(160, 160, 160);
+    padding: 4px !important;
+    border-radius: 10px;
+    max-width: 60%;
+    margin-bottom: 10px;
+}
+.cars-classes .card-main:hover>.card-inner{
+    box-shadow: inset 0px 0px 20px;
+}
+.cars-classes .card-main>.card-inner{
+    background-color: rgb(255, 113, 41);
+    transition: .3s;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px 10px !important;
+}
+.cars-classes .card-main>.card-inner>img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+.cars-classes .card-main>.card-inner>p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+.cars-classes .card-main>.card-inner>h6{
+    font-family: myfont2;
+    color: rgb(83, 88, 102);
+    margin: 10px;
+}
+.cars-classes .card-main>.card-inner>button{
+    border: none;
+    padding: 5px 20px !important;
+    color: white;
+    background-color: rgb(42, 42, 56);
+    border-radius: 4px;
+    transition: .3s;
+}
+.cars-classes .card-main>.card-inner>button:hover{
+    background-color: rgb(196, 189, 189);
+    color: black;
+}
+/* car class end */
+
+/* about us start */
+.about-us-main{
+    background-color: rgba(0, 0, 0, 0.425);
+}
+.about-us{
+    padding: 50px 0px !important;
+}
+.about-us h1{
+    font-family:myfont2;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    text-align: center;
+    margin: 50px;
+}
+.about-us h1>.heading-left{
+    color: rgb(255, 113, 41);
+}
+.about-us h1>.heading-right{
+    color: rgb(48, 41, 41);
+}
+.about-us ul{
+    list-style: none;
+    margin-bottom: 50px;
+}
+.about-us i{
+    color: rgb(255, 113, 41);
+}
+.about-us li{
+    color: white;
+}
+.about-us h4{
+    color: rgb(175, 175, 175);
+}
+
+/* about us end */
+
+/* map start */
+
+.map iframe{
+    width: 100%;
+    height: 500px;
+}
+
+/* map end */
+/* contact start */
+.contact-main{
+    background-color: rgb(255, 113, 41);
+}
+.contact-inner{
+    padding: 50px 100px !important;
+}
+.contact-inner .contact-ul{
+    list-style: none;
+}
+.contact-inner .contact-ul>li{
+    margin-bottom: 10px;
+}
+.contact-inner i{
+    margin-right: 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px black;
+}
+.contact-inner li{
+    color: rgb(87, 87, 87);
+    font-family: myfont;
+}
+.contact-inner marquee{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    text-align: justify;
+    padding: 20px !important;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: rgb(85, 85, 85);
+    box-shadow: 0px 0px 20px;
+}
+.mark{
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+/* contact end */
+/* copyright right start */
+.copy-main{
+    background-color:rgb(255, 113, 41) ;
+    border-top: 1px solid rgb(88, 88, 88);
+}
+.copy{
+    padding: 5px !important;
+    display: flex;
+    color: rgb(58, 58, 58);
+    align-items: center;
+}
+/* copyright right end */
